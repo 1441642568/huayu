@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RedFairyFlying
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: a0ca8776b51582e44817941da6e925f7, type: 3}
+    - time: 0.2
+      value: {fileID: 21300000, guid: 1f9778910061e0a48a7996424ac8738b, type: 3}
+    - time: 0.4
+      value: {fileID: 21300000, guid: d410fd05f9d99a44c92824707f535bc3, type: 3}
+    - time: 0.6
+      value: {fileID: 21300000, guid: f24807d2df8d4f342a571524a26a84f8, type: 3}
+    - time: 0.8
+      value: {fileID: 21300000, guid: ec48ef4775a9676478c96558de4724f2, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 4460b53872b31ac43a3c8ab6d585f469, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: a0ca8776b51582e44817941da6e925f7, type: 3}
+    - {fileID: 21300000, guid: 1f9778910061e0a48a7996424ac8738b, type: 3}
+    - {fileID: 21300000, guid: d410fd05f9d99a44c92824707f535bc3, type: 3}
+    - {fileID: 21300000, guid: f24807d2df8d4f342a571524a26a84f8, type: 3}
+    - {fileID: 21300000, guid: ec48ef4775a9676478c96558de4724f2, type: 3}
+    - {fileID: 21300000, guid: 4460b53872b31ac43a3c8ab6d585f469, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.0166667
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events: []
