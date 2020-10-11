@@ -54,6 +54,46 @@ public class Collectible : MonoBehaviour
                         }
                         break;
                     }
+                case "OrangeFairy":  //橙精灵
+                    {
+                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        {
+                            pc.ChangeHealth(1);  //血和蓝都+1
+                            pc.ChangeMagic(1);
+                            StartCoroutine(PlayAndLog());  //吃精灵
+                        }
+                        break;
+                    }
+                case "CyanFairy":  //蓝绿精灵
+                    {
+                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        {
+                            pc.ChangeHealth(1);  //血和蓝都+1
+                            pc.ChangeMagic(1);
+                            StartCoroutine(PlayAndLog());  //吃精灵
+                        }
+                        break;
+                    }
+                case "WhiteFairy":  //白精灵
+                    {
+                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        {
+                            pc.ChangeHealth(1);  //血和蓝都+1
+                            pc.ChangeMagic(1);
+                            StartCoroutine(PlayAndLog());  //吃精灵
+                        }
+                        break;
+                    }
+                case "YellowFairy":  //黄精灵
+                    {
+                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        {
+                            pc.ChangeHealth(1);  //血和蓝都+1
+                            pc.ChangeMagic(1);
+                            StartCoroutine(PlayAndLog());  //吃精灵
+                        }
+                        break;
+                    }
             }
         }
     }
@@ -81,8 +121,28 @@ public class Collectible : MonoBehaviour
                     myAnimator.SetBool("isGreenFairyVanishing", true);  //切消失精灵动画
                     break;
                 }
+            case "OrangeFairy":  //橙精灵
+                {
+                    myAnimator.SetBool("isOrangeFairyVanishing", true);  //切消失精灵动画
+                    break;
+                }
+            case "CyanFairy":  //蓝绿精灵
+                {
+                    myAnimator.SetBool("isCyanFairyVanishing", true);  //切消失精灵动画
+                    break;
+                }
+            case "WhiteFairy":  //白精灵
+                {
+                    myAnimator.SetBool("isWhiteFairyVanishing", true);  //切消失精灵动画
+                    break;
+                }
+            case "YellowFairy":  //黄精灵
+                {
+                    myAnimator.SetBool("isYellowFairyVanishing", true);  //切消失精灵动画
+                    break;
+                }
         }
-        yield return new WaitForSeconds(1f);  //播放1秒
+        yield return new WaitForSeconds(1f);  //播放1秒 //后期优化播放时长 .length f
         Destroy(this.gameObject);  //销毁对象
     }
 

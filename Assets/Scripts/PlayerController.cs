@@ -45,9 +45,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private Vector2 lookDirection;   //角色朝向
-    private Animator myAnimator;     //动画
+    private Animator anim;     //动画
     private Rigidbody2D rbody;       //刚体组件
     private bool isSkill;            //是否释放技能中
+
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
 
         lookDirection = new Vector2(1, 0);                //赋值默认人物朝向右方
-        myAnimator = transform.GetComponent<Animator>();  //赋值动画组件
+        anim = transform.GetComponent<Animator>();  //赋值动画组件
         rbody = GetComponent<Rigidbody2D>();              //赋值刚体组件
         //speed = 3f;                                       //赋值初始移动速度
     }
@@ -132,7 +133,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator PlayAndLog()
     {
         isSkill = true;  //开始技能释放
-        myAnimator.SetBool("isSkill", true);  //切技能动画
+        anim.SetBool("isSkill", true);  //切技能动画
         yield return new WaitForSeconds(0.2f);  //延迟0.5秒播放动画
         GameObject bullet = Instantiate(bulletPrefab, rbody.position, Quaternion.identity);  //赋值技能对象
         BulletController bc = bullet.GetComponent<BulletController>();  //获取技能对象
@@ -141,7 +142,7 @@ public class PlayerController : MonoBehaviour
             bc.Move(lookDirection, 150);  //技能移动 (朝向,速度)
         }
         yield return new WaitForSeconds(1f);  //技能释放中 冷却时间1秒
-        myAnimator.SetBool("isSkill", false);  //切回动画
+        anim.SetBool("isSkill", false);  //切回动画
         isSkill = false;  //技能释放完
     }
 
@@ -152,10 +153,20 @@ public class PlayerController : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");  //水平坐标
         float moveY = Input.GetAxisRaw("Vertical");  //垂直坐标
-        Vector2 p = rbody.position;  
-        p.x += moveX * speed * Time.deltaTime;
-        p.y += moveY * speed * Time.deltaTime;
-        rbody.MovePosition(p);
+
+        //角色朝向
+        Vector2 moveVector = new Vector2(moveX, moveY);
+        if (moveVector.x!=0||moveVector.y!=0)
+        {
+            lookDirection = moveVector;
+        }
+        anim.SetFloat("Look X", lookDirection.x);
+        anim.SetFloat("Look Y", lookDirection.y);
+        anim.SetFloat("Speed", moveVector.magnitude);
+
+        Vector2 position = rbody.position;  
+        position += moveVector * speed * Time.deltaTime;
+        rbody.MovePosition(position);
 
         ////获取按键
         //if (Input.anyKey)
