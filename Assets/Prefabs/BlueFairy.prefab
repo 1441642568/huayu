@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &3996812788223869331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -97,10 +97,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.027200341, y: 0.2276361}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.63, y: 0.48}
     newSize: {x: 0.63, y: 0.48}
     adaptiveTilingThreshold: 0.5
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.46, y: 0.42}
+  m_Size: {x: 0.4964707, y: 0.4552722}
   m_EdgeRadius: 0
 --- !u!114 &3996812788223869328
 MonoBehaviour:
@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FairyName: BlueFairy
+  collectEffect: {fileID: 0}
+  collectClip: {fileID: 0}
 --- !u!95 &3996812788223869329
 Animator:
   serializedVersion: 3

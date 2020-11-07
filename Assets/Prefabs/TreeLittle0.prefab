@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5172756549003282556}
   - component: {fileID: 5172756549003282559}
-  - component: {fileID: 5172756549003282557}
+  - component: {fileID: 7130319143976817464}
   m_Layer: 0
   m_Name: TreeLittle0
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5172756549003282558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,9 +81,9 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!61 &5172756549003282557
-BoxCollider2D:
+  m_SpriteSortPoint: 1
+--- !u!60 &7130319143976817464
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,16 +95,60 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023045778, y: -1.1937802}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1.75, y: 3.03}
     newSize: {x: 1.75, y: 3.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8298106, y: 0.6424396}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.415, y: 0}
+      - {x: 0.445, y: 0.089999996}
+      - {x: 0.355, y: 0.22999999}
+      - {x: 0.305, y: 0.38}
+      - {x: -0.05326271, y: 0.47729218}
+      - {x: 0.13337708, y: 0.36005837}
+      - {x: -0.002732277, y: 0.45603547}
+      - {x: -0.09882641, y: 0.38313794}
+      - {x: 0.04105091, y: 0.43692994}
+      - {x: -0.18871212, y: 0.5758912}
+      - {x: -0.295, y: 0.56}
+      - {x: -0.385, y: 0.35999998}
+      - {x: -0.42499998, y: 0.34}
+      - {x: -0.445, y: 0.29}
+      - {x: -0.39499998, y: 0.22999999}
+      - {x: -0.465, y: 0.22999999}
+      - {x: -0.475, y: 0.19999999}
+      - {x: -0.45499998, y: 0.099999994}
+      - {x: -0.405, y: 0.08}
+      - {x: -0.345, y: 0.099999994}
+      - {x: -0.275, y: 0.04}
+      - {x: -0.195, y: 0.01}
+      - {x: -0.114999995, y: 0.01}
+      - {x: -0.074999996, y: 0}
+      - {x: 0.125, y: 0}
+      - {x: 0.145, y: 0.01}
+      - {x: 0.205, y: 0}
+    - - {x: 0.185, y: 0.21}
+      - {x: 0.195, y: 0.22}
+      - {x: 0.185, y: 0.24}
+      - {x: 0.195, y: 0.22999999}
+      - {x: 0.195, y: 0.21}
+      - {x: 0.21499999, y: 0.19}
+      - {x: 0.205, y: 0.19999999}
+      - {x: 0.185, y: 0.17999999}
+      - {x: 0.195, y: 0.17999999}
+    - - {x: -0.1485548, y: 0.4688978}
+      - {x: 0.0029277802, y: 0.23627415}
+      - {x: -0.0015611649, y: 0.37629738}
+    - - {x: -0.093728065, y: 0.26392594}
+      - {x: 0.093411446, y: 0.3867585}
+      - {x: -0.14430618, y: 0.28115135}
+    - - {x: -0.17662334, y: 0.27243546}
+      - {x: -0.03144455, y: 0.22091796}
+      - {x: 0.035161972, y: 0.26399338}

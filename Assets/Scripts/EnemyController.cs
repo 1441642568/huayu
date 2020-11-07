@@ -16,9 +16,13 @@ public class EnemyController : MonoBehaviour
 
     private Vector2 moveDirection;//移动方向
 
-    private Rigidbody2D rbody;
+    private Rigidbody2D rbody;//刚体组件
 
-    private Animator anim;
+    private Animator anim;//动画组件
+
+    private bool isFixed;//是否被修复
+
+    public ParticleSystem brokenEffect;//损坏特效
     
     enum FaceDirection { left, right }; //脸的朝向
 
@@ -32,11 +36,14 @@ public class EnemyController : MonoBehaviour
         anim = GetComponent<Animator>();
         moveDirection = isVertical ? Vector2.up : Vector2.right;//如果是垂直移动赋初值朝上，否则朝右
         faceDirectionf = FaceDirection.right;//默认朝右
+        changeTimer = changeDirectionTime;
+        isFixed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isFixed) return;//如果被修复了，就不执行下面代码
         changeTimer -= Time.deltaTime;
         if (changeTimer<0)
         {
@@ -135,6 +142,25 @@ public class EnemyController : MonoBehaviour
         {
             pc.ChangeHealth(-1);
         }
+    }
+
+    /// <summary>
+    /// 敌人被击
+    /// </summary>
+    public void Fixed()
+    {
+        isFixed = true;//被修复
+        if (brokenEffect.isPlaying == true)
+        {
+            brokenEffect.Stop();
+        }
+        rbody.simulated = false;//禁用物理
+        anim.SetFloat("walk_left", 0);
+        anim.SetFloat("walk_right", 0);
+        anim.SetFloat("idle", 0);
+        anim.SetTrigger("fall");//播放被修复动画
+
+        
     }
 
 }

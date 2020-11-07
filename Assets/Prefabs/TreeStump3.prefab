@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4451974965246497804}
   - component: {fileID: 4451974965246497805}
-  - component: {fileID: 4451974965246497807}
+  - component: {fileID: 7846106547666807967}
   m_Layer: 0
   m_Name: TreeStump3
   m_TagString: Untagged
@@ -81,9 +81,9 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!61 &4451974965246497807
-BoxCollider2D:
+  m_SpriteSortPoint: 1
+--- !u!60 &7846106547666807967
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,16 +95,33 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.28016955}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1.42, y: 1.03}
     newSize: {x: 1.42, y: 1.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.42, y: 0.46966088}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.45999998, y: 0}
+      - {x: 0.48, y: 0.01}
+      - {x: 0.55, y: 0.049999997}
+      - {x: 0.59, y: 0}
+      - {x: 0.71, y: 0}
+      - {x: 0.71, y: 0.19}
+      - {x: 0.6626555, y: 0.26374912}
+      - {x: 0.54642236, y: 0.27281857}
+      - {x: 0.2460841, y: 0.27749634}
+      - {x: -0.046571493, y: 0.24294186}
+      - {x: -0.44022006, y: 0.23561001}
+      - {x: -0.6537478, y: 0.2693777}
+      - {x: -0.71, y: 0.19999999}
+      - {x: -0.71, y: 0.06}
+      - {x: -0.52, y: 0}
+      - {x: 0.14999999, y: 0}
+      - {x: 0.22, y: 0.02}
+      - {x: 0.29, y: 0}

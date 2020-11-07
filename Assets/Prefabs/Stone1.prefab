@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6044511345618847557}
   - component: {fileID: 6044511345618847558}
-  - component: {fileID: 6044511345618847556}
+  - component: {fileID: 2648259115749522555}
   m_Layer: 0
   m_Name: Stone1
   m_TagString: Untagged
@@ -81,9 +81,9 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!61 &6044511345618847556
-BoxCollider2D:
+  m_SpriteSortPoint: 1
+--- !u!60 &2648259115749522555
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,13 +98,39 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1.41, y: 0.89}
     newSize: {x: 1.41, y: 0.89}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.41, y: 0.89}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.345, y: 0.11}
+      - {x: 0.53499997, y: 0.099999994}
+      - {x: 0.635, y: 0.19999999}
+      - {x: 0.615, y: 0.24}
+      - {x: 0.5715146, y: 0.299829}
+      - {x: 0.020888805, y: 0.22291613}
+      - {x: 0.54482985, y: 0.23623037}
+      - {x: 0.34808683, y: 0.21943092}
+      - {x: 0.19128752, y: 0.20943117}
+      - {x: 0.13145828, y: 0.25274563}
+      - {x: -0.23888302, y: 0.2393179}
+      - {x: 0.054886103, y: 0.07240391}
+      - {x: -0.25179935, y: 0.25594616}
+      - {x: -0.41185522, y: 0.20594692}
+      - {x: -0.49505687, y: 0.24274588}
+      - {x: -0.5716858, y: 0.2528596}
+      - {x: -0.61831427, y: 0.21965885}
+      - {x: -0.5924051, y: 0.26440716}
+      - {x: -0.705, y: 0.28}
+      - {x: -0.705, y: 0.099999994}
+      - {x: -0.695, y: 0.07}
+      - {x: -0.60499996, y: 0.04}
+      - {x: -0.45499998, y: 0.04}
+      - {x: -0.325, y: 0}
+      - {x: -0.015, y: 0}
+      - {x: 0.024999999, y: 0.049999997}
+      - {x: 0.225, y: 0.03}

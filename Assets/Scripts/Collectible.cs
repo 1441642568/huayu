@@ -9,6 +9,9 @@ public class Collectible : MonoBehaviour
     public string FairyName;  //精灵名称
     private Animator myAnimator;     //动画组件
 
+    public ParticleSystem collectEffect;//拾取特效
+    public AudioClip collectClip;//拾取音效
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,8 @@ public class Collectible : MonoBehaviour
                         {
                             pc.ChangeHealth(1);  //血量+1
                             StartCoroutine(PlayAndLog());  //吃精灵
+                            Instantiate(collectEffect, transform.position, Quaternion.identity);//生成特效
+                            AudioManager.instance.AudioPlay(collectClip);//播放音效
                         }
                         break;
                     }
