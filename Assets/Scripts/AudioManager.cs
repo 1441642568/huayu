@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         instance = this;
-      //  audioS = GetComponent<AudioSource>();
+        //  audioS = GetComponent<AudioSource>();
     }
     /// <summary>
     /// 播放指定的音效

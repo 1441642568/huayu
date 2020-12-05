@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 /// <summary>
 /// NPC交互相关
 /// </summary>
@@ -16,7 +18,7 @@ public class NPCmanager : MonoBehaviour
     public float showTimer;//对话框显示计时器
 
     //=====NPC的台词音效
-    public AudioClip npcClip;//NPC台词音效
+    public AudioClip[] npcClip;//NPC台词音效
 
     private bool isNPCClipPlaying;            //NPC音效是否播放中
 
@@ -57,10 +59,14 @@ public class NPCmanager : MonoBehaviour
         //NPC音效未处于播放中，才允许播放
         if (isNPCClipPlaying == false)
         {
+            byte[] buffer = Guid.NewGuid().ToByteArray();//生成字节数组
+            int iRoot = BitConverter.ToInt32(buffer, 0);//利用BitConvert方法把字节数组转换为整数
+            Random rdmNum = new Random(iRoot);//以这个生成的整数为种子
+            int i = rdmNum.Next(0,6);
 
-            AudioManager.instance.AudioPlay(npcClip);//播放NPC音效
+            AudioManager.instance.AudioPlay(npcClip[i]);//播放NPC音效
             isNPCClipPlaying = true; //NPC音效播放中
-            yield return new WaitForSeconds(npcClip.length);  //播放完
+            yield return new WaitForSeconds(npcClip[i].length);  //播放完
             isNPCClipPlaying = false;//NPC音效处于未播放状态
         }
     }

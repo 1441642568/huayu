@@ -31,7 +31,7 @@ public class Collectible : MonoBehaviour
             {
                 case "RedFairy":  //红精灵
                     {
-                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        if (pc.HpCurrent < pc.HpMax)  //玩家血量不可以超过最大值
                         {
                             pc.ChangeHealth(1);  //血量+1
                             StartCoroutine(PlayAndLog());  //吃精灵
@@ -42,7 +42,7 @@ public class Collectible : MonoBehaviour
                     }
                 case "BlueFairy":  //蓝精灵
                     {
-                        if (pc.CurrentMagic < pc.MaxMagic)  //玩家蓝量不可以超过最大值
+                        if (pc.MpCurrent < pc.MpMax)  //玩家蓝量不可以超过最大值
                         {
                             pc.ChangeMagic(1);  //蓝量+1
                             StartCoroutine(PlayAndLog());  //吃精灵
@@ -51,7 +51,7 @@ public class Collectible : MonoBehaviour
                     }
                 case "GreenFairy":  //绿精灵
                     {
-                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        if (pc.HpCurrent < pc.HpMax)  //玩家血量不可以超过最大值
                         {
                             pc.ChangeHealth(1);  //血和蓝都+1
                             pc.ChangeMagic(1);
@@ -61,7 +61,7 @@ public class Collectible : MonoBehaviour
                     }
                 case "OrangeFairy":  //橙精灵
                     {
-                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        if (pc.HpCurrent < pc.HpMax)  //玩家血量不可以超过最大值
                         {
                             pc.ChangeHealth(1);  //血和蓝都+1
                             pc.ChangeMagic(1);
@@ -71,7 +71,7 @@ public class Collectible : MonoBehaviour
                     }
                 case "CyanFairy":  //蓝绿精灵
                     {
-                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        if (pc.HpCurrent < pc.HpMax)  //玩家血量不可以超过最大值
                         {
                             pc.ChangeHealth(1);  //血和蓝都+1
                             pc.ChangeMagic(1);
@@ -81,7 +81,7 @@ public class Collectible : MonoBehaviour
                     }
                 case "WhiteFairy":  //白精灵
                     {
-                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        if (pc.HpCurrent < pc.HpMax)  //玩家血量不可以超过最大值
                         {
                             pc.ChangeHealth(1);  //血和蓝都+1
                             pc.ChangeMagic(1);
@@ -91,7 +91,7 @@ public class Collectible : MonoBehaviour
                     }
                 case "YellowFairy":  //黄精灵
                     {
-                        if (pc.CurrentHealth < pc.MaxHealth)  //玩家血量不可以超过最大值
+                        if (pc.HpCurrent < pc.HpMax)  //玩家血量不可以超过最大值
                         {
                             pc.ChangeHealth(1);  //血和蓝都+1
                             pc.ChangeMagic(1);

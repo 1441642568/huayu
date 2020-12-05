@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/DNF.unity
+- path: Assets/Scenes/Elvenguard.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

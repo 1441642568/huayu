@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FairyName: BlueFairy
   collectEffect: {fileID: 0}
-  collectClip: {fileID: 0}
+  collectClip: {fileID: 8300000, guid: e139dc7c481bb0f46bfe9a80294c2404, type: 3}
 --- !u!95 &3996812788223869329
 Animator:
   serializedVersion: 3

@@ -17,10 +17,10 @@ TagManager:
   - Bullet
   - Monster
   - NPC
-  - 
-  - 
-  - 
-  - 
+  - Far
+  - Near
+  - SceneConfiner
+  - Barrier
   - 
   - 
   - 

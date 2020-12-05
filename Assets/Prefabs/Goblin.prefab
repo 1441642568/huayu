@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 878922973954602829}
   - component: {fileID: 878922973954602830}
   - component: {fileID: 878922973954602831}
-  - component: {fileID: 878922973954602835}
   - component: {fileID: 878922973954602834}
+  - component: {fileID: 5621138415215589355}
   m_Layer: 10
   m_Name: Goblin
   m_TagString: Untagged
@@ -132,22 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4593811, y: 0.23305035}
   m_EdgeRadius: 0
---- !u!114 &878922973954602835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878922973954602824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bae5a2e41f0cb44d9d8cd00152c7658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  changeDirectionTime: 2
-  isVertical: 0
-  brokenEffect: {fileID: 0}
 --- !u!95 &878922973954602834
 Animator:
   serializedVersion: 3
@@ -167,3 +151,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5621138415215589355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878922973954602824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae5a2e41f0cb44d9d8cd00152c7658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeDirectionTime: 2
+  isVertical: 0
+  brokenEffect: {fileID: 0}
+  force: 30
